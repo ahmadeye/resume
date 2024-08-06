@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad food resturant</title>
+    <style>
+        /* css reset */
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: rgb(244, 248, 252);
+}
+/* css variable */
+.root{
+    --navbar-height:59px;
+}
+/* navigation bar */
+#navbar{
+    display:flex;
+    align-items: center;
+    position: absolute;
+    top:0px;
+}
+/* navigation bar logo and image */
+#navbar:before{
+    content:"";
+    background-color: black;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:90%;
+    width:100%;
+    z-index: -1;
+    opacity:0.4;
+}
+#logo{
+ margin:10px 20px;
+}
+#logo img{
+ margin:5px 8px;
+ height: 50px;
+ width:50px;
+ border-radius: 200px;
+}
+/* navigation bar list items */
+#navbar ul{
+    display: flex;
+    font-family: "Bree Serif", serif;
+}
+#navbar ul li{
+    list-style: none;
+    font-size:1.3rem;
+}
+#navbar ul li a{
+    color:white;
+    display:block;
+    padding:3px 22px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+#navbar ul li a:hover{
+   color:black;
+   background: white;
+}
+/* home section */
+#home{
+    display:flex;
+    flex-direction: column;
+    margin:2px 200px;
+    height:520px;
+    align-items: center;
+    justify-content: center;
+}
+/* before pseudo selector for image */
+#home:before{
+    content:"";
+    background:url(../img/bg4.jpg) no-repeat center center/cover;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:87%;
+    width:100%;
+    z-index: -1;
+    opacity:0.9;
+}
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+}
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "Bree Serif", serif;
+}
+.btn{
+    background-color: rgb(58, 42, 42);
+    padding:5px 20px;
+    border:2px solid white;
+    margin:20px;
+    color:white;
+    font-size: large;
+    font-weight: bold;
+    font-family: "Bree Serif", serif;
+    border-radius: 13px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: white;
+    color:black;
+}
+/* utility-class */
+/* services section */
+.h-primary{
+    font-size: 3.5rem;
+    padding:10px;
+    font-family: "Bree Serif", serif;
+}
+.centre{
+    text-align: center;
+}
+.h-secondary{
+    font-size: 1.7rem;
+    font-family: "Bree Serif", serif;
+}
+#services{
+    margin:34px;
+    display:flex;
+}
+#services .box{
+    border:2px solid brown;
+    padding: 30px;
+    margin:3px 8px;
+    background-color: rgb(232, 234, 235);
+    border-radius: 28px;
+    margin-bottom: 20px;
+}
+#services .box img{
+    height:160px;
+    display:block;
+    margin:auto;
+}
+#services .box p{
+    font-family: "Bree Serif", serif;
+}
+/* client section */
+#client-section{
+  height: 344px;
+}
+#client-section::before{
+  content: "";
+  background: url(../img/bg3.jpg);
+  position:absolute;
+  height: 55%;
+  width:100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+   height: 80px;
+}
+.client-item{
+    padding: 34px;
+}
+/* contact section */
+#contact{
+    position:relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background: url(../img/img.jpg) no-repeat center center/cover;
+}
+footer{
+    background-color: black;
+    color: aliceblue;
+    padding:9px 20px;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,textarea{
+    width:100%;
+    padding:0.5rem;
+    border-radius: 9px;
+    font-size: 1.0rem;
+}
+#contact-box form{
+    width: 30%;
+}
+#contact-box label{
+    font-size: 1.5rem;
+    font-family: "Bree Serif", serif;
+    font-weight: bold;
+}
+.img{
+    transition:  all 2s ease-in-out;
+}
+.img:hover{
+     transform: rotate(360deg); 
+}
+.img1{
+    transition:  all 1s ease-in-out;
+}
+.img1:hover{
+    transform: scale(1.5); 
+}
+.img2{
+    transition:  all 2s ease-in-out;
+}
+.img2:hover{
+     transform: translatex(-123px);
+}
+
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Bree+Serif&family=Kalnia+Glaze:wght@100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <img src="/img/logo.jpeg" alt="Error loading">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <section id="home">
+        <h1 class="h-primary">
+            Welcome to Ahmad resturant
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iusto doloremque itaque.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. !
+        </p>
+        <button class="btn">Order Now</button>
+    </section>
+     <section class="class-container">
+        <h1 class="h-primary centre">
+            Our Services
+        </h1>
+        <div id="services">
+            <div class="box">
+                <div class="img"><img src="/img/bg2.png" alt="Error Loading"></div>
+                <h2 class="h-secondary centre">Food Ordering</h2>
+                <p class="centre">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto ea dolores quia esse maiores saepe cupiditate eaque provident. Obcaecati magni, ipsa in nobis maiores voluptatibus adipisci Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, est.</p>
+            </div>
+            <div class="box">
+                <div class="img1"><img src="/img/bg6.png" alt="Error Loading"></div>
+                <h2 class="h-secondary centre">Food catering</h2>
+                <p class="centre">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto ea dolores quia esse maiores saepe cupiditate eaque provident. Obcaecati magni, ipsa in nobis maiores voluptatibus adipisci Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, adipisci?Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="box">
+               <div class="img2"><img src="/img/delivery-6970072_1280.png" alt="Error Loading"></div> 
+                <h2 class="h-secondary centre">Food delivering</h2>
+                <p class="centre">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto ea dolores quia esse maiores saepe cupiditate eaque provident. Obcaecati magni, ipsa in nobis maiores voluptatibus adipiscil Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, natus.</p>
+            </div>
+        </div>
+     </section>
+     
+     <section id="client-section">
+        <h1 class="h-primary centre">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="/img/apple-7408883_1280.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="/img/logo1.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="/img/logo4.png" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="/img/logo3.png" alt="Our Client">
+            </div>
+        </div>
+     </section>
+     
+     <section id="contact">
+        <h1 class="h-primary centre">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your Name">
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="Email" name="email" id="email" placeholder="Enter your Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="Phome" name="name" id="phone Number" placeholder="Enter your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="Message">Message</label>
+                    <textarea name="Message" id="Message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+     </section>
+     <footer>
+        <div class="centre">
+            copyright &copy; www.Ahmadresturant.com All right reserved!
+        </div>
+     </footer>
+</body>
+</html>
